@@ -1,0 +1,18 @@
+celery -A src.services.worker.mweibo_worker.app worker -l info -P gevent -c 60
+celery -A src.services.worker.weixin_worker.app worker -l info -P gevent -c 60
+celery -A src.services.worker.redbook_worker.app worker -l info -P gevent -c 60
+celery -A src.services.worker.douyin_worker.app worker -l info -P gevent -c 60
+celery -A src.services.worker.bili_worker.app worker -l info -P gevent -c 60
+
+python3 -m src.services.kafka.kafka_weibo_consumer
+python3 -m src.services.kafka.kafka_weixin_consumer
+python3 -m src.services.kafka.kafka_redbook_consumer
+python3 -m src.services.kafka.kafka_douyin_consumer
+python3 -m src.services.kafka.kafka_bili_consumer
+
+python3 -m src.applications.job_manager
+
+docker stop $(docker ps -a | grep "brief" | awk '{print $1}')
+docker rm $(docker ps -a | grep "brief" | awk '{print $1}')
+
+docker rmi dts-auto-brief-v1:prod
