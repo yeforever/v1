@@ -1,7 +1,7 @@
 """
 @version: 1.0
-@author: anne
-@contact: thy.self@foxmail.com
+@author: yezi
+@contact: yezi.self@foxmail.com
 @time: 2021/11/4 下午5:03
 """
 import json
