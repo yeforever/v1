@@ -1,8 +1,8 @@
 """
 @version: 1.0
-@author: anne
-@contact: thy.self@foxmail.com
-@time: 2021/11/27 上午11:16
+@author: yezi
+@contact: yezi.self@foxmail.com
+@time: 2021/11/4 下午5:03
 """
 import sys
 import _thread
