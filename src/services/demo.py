@@ -1,6 +1,9 @@
-# -*- coding: utf-8 -*-
-# @Author  : yezi
-# @Time    : 2022/8/16
+"""
+@version: 1.0
+@author: yezi
+@contact: yezi.self@foxmail.com
+@time: 2021/11/4 下午5:03
+"""
 from src.models.mysql.dts_models import FastBriefWeixinArticle, FastBriefMweiboArticle, FastBriefRedbookArticle, \
     FastBriefBiliArticle, FastBriefDouyinArticle, DataTool51WomBriefJob, DataTool51WomBriefTask, DataTool51WomBriefStage
 import json
